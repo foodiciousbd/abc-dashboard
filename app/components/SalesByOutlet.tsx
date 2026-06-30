@@ -38,7 +38,7 @@ export default function SalesByOutlet({ data }: Props) {
           <YAxis tickFormatter={(v) => `RM ${(v / 1000).toFixed(0)}k`} tick={{ fontSize: 11, fill: '#6b7280' }} axisLine={false} tickLine={false} width={60} />
           <Tooltip
             formatter={(v) => [`RM ${Number(v).toLocaleString('en-MY', { minimumFractionDigits: 2 })}`, 'Sales']}
-            labelFormatter={shortName}
+            labelFormatter={(name) => shortName(String(name))}
             contentStyle={{ borderRadius: 8, border: '1px solid #e5e7eb', fontSize: 13 }}
           />
           <Bar dataKey="sales" radius={[6, 6, 0, 0]}>
