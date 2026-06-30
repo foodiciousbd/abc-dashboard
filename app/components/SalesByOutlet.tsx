@@ -37,7 +37,7 @@ export default function SalesByOutlet({ data }: Props) {
           <XAxis dataKey="outlet" tickFormatter={shortName} tick={{ fontSize: 11, fill: '#6b7280' }} axisLine={false} tickLine={false} />
           <YAxis tickFormatter={(v) => `RM ${(v / 1000).toFixed(0)}k`} tick={{ fontSize: 11, fill: '#6b7280' }} axisLine={false} tickLine={false} width={60} />
           <Tooltip
-            formatter={(v: number) => [`RM ${v.toLocaleString('en-MY', { minimumFractionDigits: 2 })}`, 'Sales']}
+            formatter={(v) => [`RM ${Number(v).toLocaleString('en-MY', { minimumFractionDigits: 2 })}`, 'Sales']}
             labelFormatter={shortName}
             contentStyle={{ borderRadius: 8, border: '1px solid #e5e7eb', fontSize: 13 }}
           />

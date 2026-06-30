@@ -47,7 +47,7 @@ export default function SalesByProduct({ data }: Props) {
             width={150}
           />
           <Tooltip
-            formatter={(v: number) => [`RM ${v.toLocaleString('en-MY', { minimumFractionDigits: 2 })}`, 'Sales']}
+            formatter={(v) => [`RM ${Number(v).toLocaleString('en-MY', { minimumFractionDigits: 2 })}`, 'Sales']}
             contentStyle={{ borderRadius: 8, border: '1px solid #e5e7eb', fontSize: 13 }}
           />
           <Bar dataKey="sales" radius={[0, 6, 6, 0]}>
